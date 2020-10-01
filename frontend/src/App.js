@@ -1,12 +1,15 @@
 import React from 'react';
-
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
 
-const App = () => {
+function App() {
   return (
-
-    <h1>Welcome to Proshop</h1>
-
+    <div>
+      <Header />
+      Welcome to proshop
+      <Footer />
+    </div>
   );
 }
 
