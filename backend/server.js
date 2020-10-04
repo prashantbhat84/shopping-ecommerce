@@ -1,6 +1,6 @@
 import express from 'express';
 const port = process.env.PORT || 5000;
-import products from "./data/data.js"
+import products from "./data/product.js"
 import dotenv from 'dotenv'
 import connectDB from './config/db.js';
 import colors from 'colors';
