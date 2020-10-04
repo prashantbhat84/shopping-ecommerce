@@ -1,4 +1,4 @@
-const { defaultCipherList } = require("constants");
+import mongoose from 'mongoose'
 
 const UserSchema = mongoose.Schema({
     name: {

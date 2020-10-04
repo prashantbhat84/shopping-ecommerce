@@ -1,10 +1,10 @@
 
-
+import mongoose from 'mongoose'
 const OrderSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectID,
         required: true,
-        ref: User
+        ref: 'User'
     },
     orderItems: [{
         name: {
@@ -26,7 +26,7 @@ const OrderSchema = mongoose.Schema({
         product: {
             type: mongoose.Schema.Types.ObjectID,
             required: true,
-            ref: Product
+            ref: 'Product'
         }
     }],
     shippingAddress: {
