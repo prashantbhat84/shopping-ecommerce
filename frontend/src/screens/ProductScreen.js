@@ -8,7 +8,7 @@ import Loading from '../components/Loader';
 import Message from '../components/Message'
 
 const ProductScreen = (props) => {
-    const [qty, setQty] = useState(0);
+    const [qty, setQty] = useState(1);
     const id = props.match.params.id
     const dispatch = useDispatch();
     const productdetail = useSelector(state => state.productDetails);
