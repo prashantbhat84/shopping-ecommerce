@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Message from '../components/Message';
 import { Link } from 'react-router-dom'
 import { Row, Col, ListGroup, Image, Form, Button, Card, ListGroupItem } from 'react-bootstrap';
-import { addItemToCart } from '../store/actions/cartAction'
+import { addItemToCart, removeItemFromCart } from '../store/actions/cartAction'
 
 const CartScreen = (props) => {
     const productid = props.match.params.id;
@@ -20,7 +20,8 @@ const CartScreen = (props) => {
         }
     }, [dispatch, productid, qty])
     const removeFromCartHandler = (id) => {
-        console.log(id)
+        console.log('remove item handler');
+        dispatch(removeItemFromCart(id));
     }
     const checkoutHandler = () => {
         props.history.push("/login?=shipping")
